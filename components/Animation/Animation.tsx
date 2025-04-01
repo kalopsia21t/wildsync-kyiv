@@ -1,8 +1,6 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 
-import { Stats, OrbitControls } from "@react-three/drei";
-
 import LampLava from "./LampLava";
 
 function Animation() {
