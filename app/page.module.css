@@ -105,9 +105,8 @@ a.secondary {
 /* Enable hover only on non-touch devices */
 
 @media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+  .mainInfo {
+    padding: 1rem;
   }
 
   .main {
