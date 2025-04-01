@@ -9,17 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^10.0.5",
+    "@react-three/fiber": "^9.1.0",
+    "next": "15.2.4",
+    "nice-color-palettes": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "three": "^0.174.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "glslify-loader": "^2.0.0",
+    "lucide-react": "^0.486.0",
+    "raw-loader": "^4.0.2",
+    "typescript": "^5"
   }
 }

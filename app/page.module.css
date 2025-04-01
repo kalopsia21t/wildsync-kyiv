@@ -1,19 +1,15 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
   font-family: var(--font-geist-sans);
+  /* background-color: #5e9f4d; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +23,22 @@
   }
 }
 
+.animation {
+  position: fixed; /* Ensures it stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  z-index: -1; /*Pushes it behind all content */
+}
+
 .main {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  width: 100vw;
+  min-height: calc(100vh - 4rem);
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
 }
 
 .main ol {
@@ -56,6 +63,12 @@
   font-weight: 600;
 }
 
+.mainInfo {
+  width: 100vw;
+  padding: 8rem;
+  font-size: 2rem;
+}
+
 .ctas {
   display: flex;
   gap: 16px;
@@ -68,10 +81,7 @@
   padding: 0 20px;
   border: none;
   border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -92,39 +102,7 @@ a.secondary {
   min-width: 158px;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
 
 @media (max-width: 600px) {
   .page {
@@ -152,12 +130,6 @@ a.secondary {
 
   a.secondary {
     min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 }
 

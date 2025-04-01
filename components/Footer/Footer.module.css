@@ -1,0 +1,13 @@
+.footer {
+  position: sticky;
+
+  bottom: 0;
+  width: 100vw;
+  height: 4rem;
+  background: #215e33;
+  opacity: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
