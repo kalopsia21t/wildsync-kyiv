@@ -33,7 +33,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.page}>
-          <div className={styles.animation}>{/* <Animation /> */}</div>
+          <div className={styles.animation}>
+            <Animation />
+          </div>
           <Header />
           <main className={styles.main}>{children}</main>
 

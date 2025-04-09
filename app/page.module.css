@@ -70,3 +70,9 @@ a.secondary {
     min-width: auto;
   }
 }
+
+@media (max-width: 480px) {
+  .main {
+    padding-top: 4rem;
+  }
+}
