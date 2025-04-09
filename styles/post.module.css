@@ -1,0 +1,107 @@
+.post {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 5rem;
+  padding: 5rem;
+  background: black;
+  width: 80vw;
+}
+
+.postImgContainer {
+  display: inline-block;
+
+  height: 48vh;
+  width: 32vw;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 998;
+}
+.postImg {
+  object-fit: cover;
+}
+
+.postInfo {
+  padding-left: 3rem;
+}
+
+.postTitle {
+  font-size: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.postDesc {
+  font-size: 1.5rem;
+
+  padding-bottom: 2rem;
+}
+
+.postAction {
+  font-size: 2rem;
+
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: #3f6730;
+  }
+}
+
+@media (max-width: 1496px) {
+  .post {
+    padding: 4rem;
+  }
+  .postImgContainer {
+    height: 30rem;
+    width: 20rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .post {
+    padding: 3rem;
+  }
+
+  .postImgContainer {
+    height: 24rem;
+    width: 16rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .post {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2rem;
+  }
+
+  .postImgContainer {
+    height: 60vh;
+    width: 60vw;
+  }
+
+  .postInfo {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2rem;
+  }
+
+  .postImgContainer {
+    height: 30vh;
+    width: 60vw;
+  }
+
+  .postInfo {
+    padding: 0;
+  }
+}

@@ -1,30 +1,42 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import styles from "@styles/events.module.css";
+import styles from "./Widget.module.css";
 
 type WidgetT = {
   title: string;
   img: string;
   actionSrc: string;
   action: string;
+  pageUrl: string;
+  postId: string;
 };
 
-export default function Widget({ title, img, actionSrc, action }: WidgetT) {
+export default function Widget({
+  title,
+  img,
+  actionSrc,
+  action,
+  postId,
+  pageUrl = "news",
+}: WidgetT) {
   return (
-    <div className={styles.eventCard}>
-      <div className={styles.eventImgContainer}>
+    <div className={styles.widget}>
+      <div className={styles.widgetImgContainer}>
         <Image
-          className={styles.eventImg}
+          className={styles.widgetImg}
           src={img}
           alt="Wildsync 15/02"
           layout="fill"
           objectFit="cover"
         />
       </div>
-      <div className={styles.eventInfo}>
-        <h3>{title}</h3>
+      <div className={styles.widgetInfo}>
+        <h3>
+          <Link href={`/${pageUrl}/${postId}`}>{title}</Link>
+        </h3>
       </div>
-      <div className={styles.eventActions}>
+      <div className={styles.widgetActions}>
         <a href={actionSrc}>{action}</a>
       </div>
     </div>

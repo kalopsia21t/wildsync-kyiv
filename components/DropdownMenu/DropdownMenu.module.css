@@ -53,3 +53,13 @@
     color: #3f6730;
   }
 }
+
+@media (max-width: 480px) {
+  .button {
+    height: 4rem;
+  }
+
+  .overlay {
+    top: 4rem;
+  }
+}
