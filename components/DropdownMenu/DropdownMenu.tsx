@@ -19,13 +19,16 @@ export default function DropdownMenu() {
   return (
     <div className={styles.dropdown}>
       <button onClick={toggleMenu} className={styles.button}>
-        {isOpen ? <X size={48} /> : <Menu size={48} />}
+        {isOpen ? <X /> : <Menu />}
       </button>
       {isOpen && (
         <div className={styles.overlay}>
           <div className={styles.menu} onClick={handleClickOnMenu}>
             <Link href="/" className={styles.menuItem}>
               Home
+            </Link>
+            <Link href="/news" className={styles.menuItem}>
+              News
             </Link>
             <Link href="/events" className={styles.menuItem}>
               Events

@@ -2,54 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding-top: 10rem;
-}
-
-.eventCard {
-  display: flex;
-  height: 30rem;
-  width: 21rem;
-  background-color: black;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.eventImgContainer {
-  display: inline-block;
-
-  height: 19rem;
-  width: 19rem;
-
-  position: relative;
-  overflow: hidden; /* Hide parts of the image that exceed the container */
-  z-index: 998;
-}
-.eventImg {
-  object-fit: cover;
-}
-
-.eventInfo {
-  width: 100%;
-  text-align: left;
-  padding: 1.5rem 1rem 0 1rem;
-}
-
-.eventActions button {
-  font-size: 1rem;
-
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-}
-
-.eventActions {
-  width: 100%;
-  text-align: left;
-  padding: 1.5rem 1rem 0 1rem;
-  font-size: 1rem;
+  padding-top: 5rem;
 }
 
 @media (max-width: 1496px) {
@@ -61,34 +14,12 @@
 
 @media (max-width: 1200px) {
   .event {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .event {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-  }
-
-  .eventCard {
-    height: 20rem;
-    width: 12rem;
-  }
-
-  .eventImgContainer {
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-/* Media query for small screens */
-@media (max-width: 480px) {
-  .event {
-    grid-template-columns: 1fr; /* 1 column on small screens */
-  }
-
-  .eventCard {
-    height: 24rem;
-    width: 18rem;
+    grid-template-columns: 1fr;
   }
 }
