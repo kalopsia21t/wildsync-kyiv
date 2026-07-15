@@ -4,8 +4,8 @@
   bottom: 0;
   width: 100vw;
   height: 4rem;
-  background: #215e33;
-  opacity: 0.5;
+
+  background: var(--surface-overlay);
 
   display: flex;
   justify-content: center;

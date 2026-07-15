@@ -1,0 +1,40 @@
+/* Central colour theme — single source of truth for every DOM colour.
+   The brand purple scale mirrors styles/palette.ts (used by the WebGL
+   background). All interactive hovers use --hover (#9d4edd). */
+
+:root {
+  /* Brand purple scale */
+  --purple-100: #e0aaff;
+  --purple-200: #c77dff;
+  --purple-300: #9d4edd;
+  --purple-400: #7b2cbf;
+  --purple-500: #5a189a;
+
+  /* Neutrals */
+  --white: #fafcfa;
+  --black: #0a0a0a;
+
+  /* Surfaces */
+  --surface-solid: #000000;
+  --surface-overlay: rgba(0, 0, 0, 0.4);
+
+  /* Text */
+  --text: var(--white);
+
+  /* Interaction — every hover shares this colour */
+  --hover: var(--purple-300);
+  --button-primary-hover: var(--hover);
+  --button-secondary-hover: var(--hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--black);
+    --foreground: var(--white);
+
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  }
+}
+
