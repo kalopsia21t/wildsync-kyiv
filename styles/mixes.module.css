@@ -1,0 +1,53 @@
+.section {
+  background-color: transparent;
+  color: #eeeeee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 40px 20px;
+  padding-top: 100px;
+}
+
+.mixesContainer {
+  min-width: 300px;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mixCard {
+  background-color: #181818;
+  border: 1px solid #282828;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.mixCard:hover {
+  border-color: #f50;
+  transform: translateY(-2px);
+}
+
+.mixHeader {
+  padding: 14px 16px 8px 16px;
+}
+
+.mixDate {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mixTitle {
+  margin: 4px 0 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.playerWrapper {
+  min-width: 450px;
+}
