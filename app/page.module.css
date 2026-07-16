@@ -35,10 +35,9 @@
 .main {
   display: flex;
   width: 100vw;
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 6rem);
   justify-content: center;
-  padding-top: 4rem;
-  padding-bottom: 10rem;
+  padding: 7rem 0 0;
 }
 
 .main ol {
