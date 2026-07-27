@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding-top: 10rem;
+  padding-bottom: 1rem;
 }
 
 .eventCard {
