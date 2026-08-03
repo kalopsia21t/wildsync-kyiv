@@ -5,8 +5,8 @@ import styles from "@styles/events.module.css";
 type WidgetT = {
   title: string;
   img: string;
-  actionSrc: string;
-  action: string;
+  actionSrc?: string;
+  action?: string;
 };
 
 export default function Widget({ title, img, actionSrc, action }: WidgetT) {

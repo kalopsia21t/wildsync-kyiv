@@ -38,11 +38,6 @@ export default function RootLayout({
           </div>
           <Header />
           <main className={styles.main}>
-            {/* <div className={styles.mainInfo}>
-              Wildsync is an series of an events, led by collaboration of DJ
-              Maze and Mezzanine Kyiv Art Space, showcasing drum & bass, jungle
-              and breakbeat music deeply rooted in the underground culture.
-            </div> */}
             {children}
           </main>
 
