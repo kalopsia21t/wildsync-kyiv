@@ -30,6 +30,9 @@ export default function DropdownMenu() {
             <Link href="/events" className={styles.menuItem}>
               Events
             </Link>
+             <Link href="/mixes" className={styles.menuItem}>
+              Mixes
+            </Link>
             <Link href="/about" className={styles.menuItem}>
               About Us
             </Link>
