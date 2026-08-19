@@ -8,6 +8,32 @@
   background: var(--surface-overlay);
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 2.5rem;
+}
+
+.copy {
+  font-size: 0.95rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.iconLink {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
