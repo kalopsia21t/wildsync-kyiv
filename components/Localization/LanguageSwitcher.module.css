@@ -1,0 +1,33 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.switcher select {
+  min-width: 4rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  background: var(--black);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.switcher select:hover,
+.switcher select:focus-visible {
+  border-color: var(--hover);
+  color: var(--hover);
+  outline: none;
+}

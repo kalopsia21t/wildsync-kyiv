@@ -5,9 +5,11 @@ import Link from "next/link";
 import styles from "./DropdownMenu.module.css";
 
 import { Menu, X } from "lucide-react";
+import { useLocalization } from "@components/Localization/Localization";
 
 export default function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLocalization();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -25,16 +27,19 @@ export default function DropdownMenu() {
         <div className={styles.overlay}>
           <div className={styles.menu} onClick={handleClickOnMenu}>
             <Link href="/" className={styles.menuItem}>
-              Home
+              {t("home")}
             </Link>
             <Link href="/events" className={styles.menuItem}>
-              Events
+              {t("events")}
+            </Link>
+            <Link href="/media" className={styles.menuItem}>
+              {t("media")}
             </Link>
              <Link href="/mixes" className={styles.menuItem}>
-              Mixes
+              {t("mixes")}
             </Link>
             <Link href="/about" className={styles.menuItem}>
-              About Us
+              {t("about")}
             </Link>
           </div>
         </div>

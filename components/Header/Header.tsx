@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 
 import DropdownMenu from "@components/DropdownMenu";
+import LanguageSwitcher from "@components/Localization/LanguageSwitcher";
 
 
 export default function Header() {
@@ -12,7 +13,8 @@ export default function Header() {
       <Link href="/">
         <Image src="/images/wildsync_white.png" alt="Wildsync" width={280} height={30}/>
       </Link>
-      <div>
+      <div className={styles.headerActions}>
+        <LanguageSwitcher />
         <DropdownMenu />
       </div>
     </header>

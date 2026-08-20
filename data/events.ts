@@ -46,6 +46,24 @@ export const events: EventT[] = [
     description: "What’s gwarnin!? Пані та панове, джангл двіжи в барі Косой Жук це завжди пожежа, і цієї суботи я та Андрій Strictly збираємся пограти для вас свої рідкісні знахідки та круті новинки. Запрошуємо вас завітати на массів і зарядитись енергією справжнього андерграунду.",
   },
   {
+    slug: "wildsync-17-01-2026-namir",
+    title: "Wildsync 17/01/2026 (Namir)",
+    img: "/posters/17_01_2026_Namir.jpg",
+    date: "17 January 2026",
+    location: "Namir",
+    lineup: "Strictly, Nast-X",
+    description: "Wildsync знову збирає рейв-спільноту! Оригінальний і ексклюзівний вініловий селекшн від Strictly та Nast-X. Фірмовий Jungle & Drum’n’Bass тейковер — гучно, щільно і по-справжньому.",
+  },
+  {
+    slug: "wildsync-04-10-2025-hvlv",
+    title: "Wildsync 04/10/2025 (HVLV)",
+    img: "/posters/04_10_2025_HVLV.jpg",
+    date: "04 October 2025",
+    location: "HVLV",
+    lineup: "P.one, Strictly, Siedin",
+    description: "Wildsync повертається з фірмовим Jungle та Drum’n’Bass тейковером від трьох резидентів: Strictly, Siedin та P.One, кожен з яких представить унікальний селекшн стилю від раннього Hardcore до сучасного Jungle продакшену. У цих хлопців є потужна зброя на вінілі, якої нема ні в кого в радіусі 1000 кілометрів, тож не пропусти!"
+  },
+  {
     slug: "wildsync-10-08-2025-hvlv",
     title: "Wildsync 10/08/2025 (HVLV)",
     img: "/posters/10_08_2025_HVLV.jpg",
