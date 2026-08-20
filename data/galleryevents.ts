@@ -15,7 +15,7 @@ export const galleryEvents: GalleryEventT[] = [
     img: "/posters/10_08_2025_HVLV.jpg",
     date: "10 August 2025",
     location: "HVLV",
-    description: "Тут буде опис події Wildsync 10/08/2025 (HVLV).",
+    description: "Photo by Oleksandra Horokhovska.",
     folderName: "wildsync/events/2025-08-10-wildsync/media"
   },
 ];

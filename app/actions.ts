@@ -28,7 +28,7 @@ export async function getPhotosFromFolder(folderName: string): Promise<Cloudinar
   try {
     const resources = await cloudinary.search
       .expression(`asset_folder:"${folderName}" AND resource_type:image`)
-      .max_results(50) 
+      .max_results(100) 
       .sort_by('public_id','desc')
       .execute();
 

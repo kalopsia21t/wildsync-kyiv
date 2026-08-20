@@ -25,6 +25,7 @@ export default async function EventPage({ params }: Props) {
   return (
     <div className={styles.mediaContainer}>
       <h1>{event.title}</h1>
+      <p>{event.description}</p>
 
       <div className={styles.gallery}>
         {photos.map((photo) => (
