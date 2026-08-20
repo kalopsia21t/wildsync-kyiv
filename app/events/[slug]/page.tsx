@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { getEventBySlug } from "../../../data/events";
+import { getEventBySlug } from "@utils/getEventBySlug";
+import { events } from "@data/events";
 import styles from "@styles/events.module.css";
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 
 export default async function EventPage({ params }: Props) {
   const {slug} = await params;
-  const event = getEventBySlug(slug);
+  const event = getEventBySlug(events, slug);
 
   if (!event) {
     return notFound();

@@ -11,7 +11,9 @@
   "dependencies": {
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.0",
+    "cloudinary": "^2.10.0",
     "next": "^15.5.21",
+    "next-cloudinary": "^6.17.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "^0.174.0"

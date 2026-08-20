@@ -18,7 +18,7 @@ export default function AboutPage() {
                     які грають джангл і драм-н-бейс та мають нетипові для локальної сцени
                     селекції. Так сформувався перший резидентський склад WildSync. До
                     нього увійшли DJ Siedin та P.one, а згодом приєдналися Strictly та
-                    Nasty-X.
+                    Nast-X.
                 </p>
                 <p>
                     Wildsync провів серію івентів у Mezzanine та HVLV, представляючи
