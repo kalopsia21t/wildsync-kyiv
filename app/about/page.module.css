@@ -1,0 +1,35 @@
+.about {
+  width: min(100%, 900px);
+  padding: 0 2rem 4rem;
+  text-align: left;
+}
+
+.about h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.copy {
+  max-width: 70ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.copy p {
+  margin: 0 0 1.5rem;
+}
+
+.copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 0 1rem 3rem;
+  }
+
+  .about h1 {
+    margin-bottom: 1.5rem;
+  }
+}
