@@ -14,7 +14,7 @@ export default function Header() {
         <Image src="/images/wildsync_white.png" alt="Wildsync" width={280} height={30}/>
       </Link>
       <div className={styles.headerActions}>
-        <LanguageSwitcher />
+        <LanguageSwitcher className={styles.headerLanguage} />
         <DropdownMenu />
       </div>
     </header>

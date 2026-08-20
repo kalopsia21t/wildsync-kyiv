@@ -6,6 +6,7 @@ import styles from "./DropdownMenu.module.css";
 
 import { Menu, X } from "lucide-react";
 import { useLocalization } from "@components/Localization/Localization";
+import LanguageSwitcher from "@components/Localization/LanguageSwitcher";
 
 export default function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,9 @@ export default function DropdownMenu() {
             <Link href="/about" className={styles.menuItem}>
               {t("about")}
             </Link>
+            <div className={styles.mobileLanguage} onClick={(event) => event.stopPropagation()}>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}
