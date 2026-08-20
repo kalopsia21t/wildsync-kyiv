@@ -6,9 +6,7 @@ import { getEventBySlug } from "../../../data/events";
 import styles from "@styles/events.module.css";
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{slug: string}>;
 };
 
 export default async function EventPage({ params }: Props) {
