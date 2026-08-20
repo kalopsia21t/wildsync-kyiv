@@ -24,7 +24,6 @@ export default function Media() {
             slug={event.slug}
             description={event.description}
             photo={photo}
-            action="View photos"
           />
         ))}
       </section>
