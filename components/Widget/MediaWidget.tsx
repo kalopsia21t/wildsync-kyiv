@@ -13,12 +13,11 @@ type WidgetT = {
     width: number;
     height: number;
   } | null;
-  action?: string;
 };
 
-export default function MediaWidget({ title, slug, description, photo, action }: WidgetT) {
+export default function MediaWidget({ title, slug, description, photo }: WidgetT) {
   return (
-    <article className={styles.mediaItem}>
+    <Link href={`/media/${slug}`} className={styles.mediaItem}>
       <div className={styles.mediaPreview}>
         {photo ? (
           <CldImage
@@ -36,12 +35,7 @@ export default function MediaWidget({ title, slug, description, photo, action }:
       <div className={styles.mediaInfo}>
         <h2 className={styles.photoTitle}>{title}</h2>
         <p className={styles.photoDescription}>{description}</p>
-        {action && (
-          <Link href={`/media/${slug}`} className={styles.photoAction}>
-            {action}
-          </Link>
-        )}
       </div>
-    </article>
+    </Link>
   );
 }
