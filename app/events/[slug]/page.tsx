@@ -11,8 +11,9 @@ type Props = {
   };
 };
 
-export default function EventPage({ params }: Props) {
-  const event = getEventBySlug(params.slug);
+export default async function EventPage({ params }: Props) {
+  const {slug} = await params;
+  const event = getEventBySlug(slug);
 
   if (!event) {
     return notFound();

@@ -37,6 +37,15 @@ export const events: EventT[] = [
     description: "Якщо цей постер зачепив, значить варто запам’ятати дату. 24 квітня вечірка Wildsync у «Намірі». 4 години Jungle та Drum’n’Bass з вінілу від Strictly та Omen з гостьовим сетом. Не витрачай час на нудні бари, залітай на звук джунглів у центрі БЖ.",
   },
   {
+    slug: "rumble-in-the-jungle-14-03-2026-kosoy-zhuk",
+    title: "Rumble in the Jungle 14/03/2026 (Kosoy Zhuk)",
+    img: "/posters/14_03_2026_Kosoy_Juke.jpg",
+    date: "14 March 2026",
+    location: "Kosoy Zhuk",
+    lineup: "Maze Of Death, Strictly",
+    description: "What’s gwarnin!? Пані та панове, джангл двіжи в барі Косой Жук це завжди пожежа, і цієї суботи я та Андрій Strictly збираємся пограти для вас свої рідкісні знахідки та круті новинки. Запрошуємо вас завітати на массів і зарядитись енергією справжнього андерграунду.",
+  },
+  {
     slug: "wildsync-10-08-2025-hvlv",
     title: "Wildsync 10/08/2025 (HVLV)",
     img: "/posters/10_08_2025_HVLV.jpg",

@@ -34,6 +34,7 @@
   justify-content: flex-start;
   align-items: stretch;
   margin: 0;
+  padding: 1rem 0.5rem 1.5rem;
 }
 
 .eventImgContainer {
@@ -101,6 +102,15 @@
   width: 100%;
   text-align: left;
   padding: 1rem 1rem 0;
+}
+
+.eventInfo h3 {
+  transition: color 0.2s ease;
+}
+
+.eventCard:hover .eventInfo h3,
+.eventCard:focus-visible .eventInfo h3 {
+  color: var(--hover);
 }
 
 .eventActions {

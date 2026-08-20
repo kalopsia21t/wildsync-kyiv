@@ -11,7 +11,7 @@ export default function Events() {
       </div>
       <div className={styles.event}>
         {events.map((event: (typeof events)[number]) => {
-          return <Widget key={event.slug} {...event} actionSrc={`/events/${event.slug}`} action="View event" />;
+          return <Widget key={event.slug} {...event} actionSrc={`/events/${event.slug}`} />;
         })}
       </div>
     </div>
