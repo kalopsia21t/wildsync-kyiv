@@ -2,6 +2,7 @@ import styles from '@styles/media.module.css';
 import MediaWidget from '@components/Widget/MediaWidget';
 import { getPhotosFromFolder } from '../actions';
 import { galleryEvents } from '@data/galleryevents';
+import LocalizedText from '@components/Localization/LocalizedText';
 
 const mediaItems = await Promise.all(
   galleryEvents.map(async (event) => ({
@@ -13,8 +14,8 @@ const mediaItems = await Promise.all(
 export default function Media() {
   return (
     <div className={styles.mediaContainer}>
-      <h1>Media</h1>
-      <p>Check out our archive for photos!</p>
+      <h1><LocalizedText translationKey="mediaTitle" /></h1>
+      <p><LocalizedText translationKey="mediaIntro" /></p>
 
       <section className={styles.mediaGrid}>
         {mediaItems.map(({ event, photo }) => (

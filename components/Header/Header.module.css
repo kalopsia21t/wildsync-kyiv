@@ -10,3 +10,9 @@
   padding: 20px;
   background-color: black;
 }
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,4 +1,5 @@
 import styles from '@styles/mixes.module.css';
+import MixMeta from './MixMeta';
 
 const fallbackMixes = [
   {
@@ -53,21 +54,12 @@ export default async function MixesPage() {
       {tracks.map((track, index) => {
 
         const rawDateString = track.created_at;
-        const dateObj = new Date(rawDateString);
-
-        const formattedDate = dateObj.toLocaleDateString('uk-UA', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric'
-        });
-
-        const tag = index === 0 ? "Останній реліз" : "Мікс / Сет";
         const encodedTrackUrl = encodeURIComponent(track.permalink_url);
 
         return (
           <div key={track.id} className={styles.mixCard}>
             <div className={styles.mixHeader}>
-              <span className={styles.mixDate}>{tag} — {formattedDate}</span>
+              <MixMeta date={rawDateString} index={index} />
               <h3 className={styles.mixTitle}>{track.title}</h3>
             </div>
             <div className={styles.playerWrapper}>
