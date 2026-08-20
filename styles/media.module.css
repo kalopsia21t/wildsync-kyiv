@@ -170,6 +170,7 @@
 
 @media (max-width: 600px) {
   .mediaContainer {
+    align-self: flex-start;
     padding: 1rem;
   }
 
