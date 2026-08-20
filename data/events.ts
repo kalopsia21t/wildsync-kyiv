@@ -66,7 +66,7 @@ export const events: EventT[] = [
   {
     slug: "wildsync-10-08-2025-hvlv",
     title: "Wildsync 10/08/2025 (HVLV)",
-    img: "/posters/10_08_2025_HVLV.jpg",
+    img: "/posters/10_08_2025_HVLV.JPG",
     date: "10 August 2025",
     location: "HVLV",
     lineup: "Maze of Death b2b P.one, Vanya Bios, Strictly, Siedin",
