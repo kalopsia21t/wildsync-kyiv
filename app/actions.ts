@@ -24,7 +24,7 @@ export async function getPhotosFromFolder(folderName: string): Promise<Cloudinar
       .sort_by('public_id','desc')
       .execute();
 
-    return resources.resources.map((asset: any) => ({
+    return resources.resources.map((asset: any) => ({ // ts-ignore @typescript-eslint/no-explicit-any
       publicId: asset.public_id,
       displayName: asset.filename,
       secureUrl: asset.secure_url,
