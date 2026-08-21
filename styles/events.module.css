@@ -147,7 +147,22 @@
   }
 }
 
+@media (max-width: 600px) {
+  .eventDetailPage {
+    padding: 1rem;
+  }
+
+  .eventDetailCard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 520px) {
+  .eventsHeader {
+    padding: 0 1rem;
+  }
+
   .event {
     grid-template-columns: 1fr;
     padding: 0 1rem 1rem;
