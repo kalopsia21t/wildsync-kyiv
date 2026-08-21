@@ -1,10 +1,15 @@
+.eventsContainer {
+  width: 100%;
+  padding: 4rem 8rem;
+}
+
 .eventsHeader {
   text-align: flex-start;
   margin-bottom: 4rem;
 
   h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+
   }
 
   p {
@@ -22,7 +27,6 @@
   align-items: start;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .eventCard {
@@ -161,13 +165,17 @@
 }
 
 @media (max-width: 520px) {
+  .eventsContainer {
+    padding: 1rem;
+  }
+
   .eventsHeader {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .event {
     grid-template-columns: 1fr;
-    padding: 0 1rem 1rem;
+    padding: 0 0 1rem;
   }
 
   .eventCard {

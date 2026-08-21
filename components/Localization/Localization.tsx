@@ -13,6 +13,7 @@ type TranslationKey =
   | "aboutTitle"
   | "eventsIntro"
   | "mediaTitle"
+  | "photoReport"
   | "mediaIntro"
   | "mixLatest"
   | "mixArchive"
@@ -37,6 +38,7 @@ const translations: Record<Language, TranslationMap> = {
     aboutTitle: "About Us",
     eventsIntro: "Check out our upcoming and past events!",
     mediaTitle: "Media",
+    photoReport: "Photo Report",
     mediaIntro: "Check out our archive for photos!",
     mixLatest: "Latest release",
     mixArchive: "Archive",
@@ -58,6 +60,7 @@ const translations: Record<Language, TranslationMap> = {
     aboutTitle: "Про нас",
     eventsIntro: "Перегляньте майбутні та минулі події!",
     mediaTitle: "Медіа",
+    photoReport: "Фото Звіт",
     mediaIntro: "Перегляньте наш фотоархів!",
     mixLatest: "Останній реліз",
     mixArchive: "Архів",

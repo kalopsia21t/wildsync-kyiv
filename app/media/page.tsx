@@ -14,8 +14,12 @@ const mediaItems = await Promise.all(
 export default function Media() {
   return (
     <div className={styles.mediaContainer}>
-      <h1><LocalizedText translationKey="mediaTitle" /></h1>
-      <p><LocalizedText translationKey="mediaIntro" /></p>
+      <h1 className={styles.mediaTitle}>
+        <LocalizedText translationKey="mediaTitle" />
+      </h1>
+      <p className={styles.mediaIntro}>
+        <LocalizedText translationKey="mediaIntro" />
+      </p>
 
       <section className={styles.mediaGrid}>
         {mediaItems.map(({ event, photo }) => (

@@ -4,6 +4,9 @@ import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 import styles from "@styles/media.module.css";
 
+import LocalizedText from '@components/Localization/LocalizedText';
+
+
 type WidgetT = {
   title: string;
   slug: string;
@@ -33,7 +36,10 @@ export default function MediaWidget({ title, slug, description, photo }: WidgetT
         )}
       </div>
       <div className={styles.mediaInfo}>
-        <h2 className={styles.photoTitle}>{title}</h2>
+        <h2 className={styles.photoTitle}>
+          <LocalizedText translationKey="photoReport" />
+          {`: ${title}`}
+        </h2>
         <p className={styles.photoDescription}>{description}</p>
       </div>
     </Link>
