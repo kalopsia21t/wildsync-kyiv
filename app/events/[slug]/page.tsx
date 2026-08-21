@@ -42,6 +42,7 @@ export default async function EventPage({ params }: Props) {
           <p className={styles.eventDetailMeta}><LocalizedText translationKey="location" />: {event.location}</p>
           <p className={styles.eventDetailDescription}>{event.description}</p>
           <p className={styles.eventDetailMeta}><LocalizedText translationKey="lineup" />: {event.lineup}</p>
+          <p className={styles.eventDetailMeta}><LocalizedText translationKey="posterAuthor" />: {event.posterAuthor}</p>
         </div>
       </div>
     </div>

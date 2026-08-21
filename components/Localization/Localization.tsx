@@ -22,7 +22,8 @@ type TranslationKey =
   | "location"
   | "lineup"
   | "openPhoto"
-  | "closePhoto";
+  | "closePhoto"
+  | "posterAuthor";
 
 type TranslationMap = Record<TranslationKey, string>;
 
@@ -46,6 +47,7 @@ const translations: Record<Language, TranslationMap> = {
     lineup: "Lineup",
     openPhoto: "Open photo",
     closePhoto: "Close photo",
+    posterAuthor: "Poster",
   },
   uk: {
     home: "Головна",
@@ -66,6 +68,7 @@ const translations: Record<Language, TranslationMap> = {
     lineup: "Лайнап",
     openPhoto: "Відкрити фото",
     closePhoto: "Закрити фото",
+    posterAuthor: "Постер",
   },
 };
 
