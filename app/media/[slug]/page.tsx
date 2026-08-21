@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import styles from "@styles/media.module.css";
 
 import { getPhotosFromFolder } from '../../actions';
-import GalleryPhotoItem from '@components/GalleryPhotoItem/GalleryPhotoItem';
+import Gallery from '@components/Gallery/Gallery';
 
 import { galleryEvents } from "@data/galleryevents";
 
@@ -27,11 +27,7 @@ export default async function EventPage({ params }: Props) {
       <h1>{event.title}</h1>
       <p>{event.description}</p>
 
-      <div className={styles.gallery}>
-        {photos.map((photo) => (
-          <GalleryPhotoItem key={photo.publicId} photo={photo} />
-        ))}
-      </div>
+      <Gallery photos={photos} />
     </div>
   );
 }
