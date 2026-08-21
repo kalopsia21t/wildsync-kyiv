@@ -5,7 +5,8 @@
   width: 100vw;
   height: 4rem;
 
-  background: var(--surface-overlay);
+  background-color: var(--black);
+
 
   display: flex;
   justify-content: space-between;

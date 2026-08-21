@@ -19,29 +19,26 @@ export default function DropdownMenu() {
     toggleMenu();
   };
 
+  const menuLinks = (
+    <>
+      <Link href="/" className={styles.menuItem}>{t("home")}</Link>
+      <Link href="/events" className={styles.menuItem}>{t("events")}</Link>
+      <Link href="/media" className={styles.menuItem}>{t("media")}</Link>
+      <Link href="/mixes" className={styles.menuItem}>{t("mixes")}</Link>
+      <Link href="/about" className={styles.menuItem}>{t("about")}</Link>
+    </>
+  );
+
   return (
     <div className={styles.dropdown}>
+      <nav className={styles.desktopMenu}>{menuLinks}</nav>
       <button onClick={toggleMenu} className={styles.button}>
         {isOpen ? <X size={48} /> : <Menu size={48} />}
       </button>
       {isOpen && (
         <div className={styles.overlay}>
           <div className={styles.menu} onClick={handleClickOnMenu}>
-            <Link href="/" className={styles.menuItem}>
-              {t("home")}
-            </Link>
-            <Link href="/events" className={styles.menuItem}>
-              {t("events")}
-            </Link>
-            <Link href="/media" className={styles.menuItem}>
-              {t("media")}
-            </Link>
-             <Link href="/mixes" className={styles.menuItem}>
-              {t("mixes")}
-            </Link>
-            <Link href="/about" className={styles.menuItem}>
-              {t("about")}
-            </Link>
+            {menuLinks}
             <div className={styles.mobileLanguage} onClick={(event) => event.stopPropagation()}>
               <LanguageSwitcher />
             </div>

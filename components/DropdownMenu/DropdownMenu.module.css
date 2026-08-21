@@ -4,6 +4,12 @@
   z-index: 999;
 }
 
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
 .button {
   padding: 10px 20px;
   border: none;
@@ -43,15 +49,20 @@
 .menuItem {
   display: block;
   text-decoration: none;
-  padding: 20px;
+  padding: 0;
   cursor: pointer;
   color: var(--text);
-  font-size: 3rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
 
   &:hover {
     color: var(--hover);
   }
+}
+
+.button,
+.overlay {
+  display: none;
 }
 
 .mobileLanguage {
@@ -60,6 +71,23 @@
 }
 
 @media (max-width: 767px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .button {
+    display: block;
+  }
+
+  .overlay {
+    display: flex;
+  }
+
+  .menuItem {
+    padding: 20px;
+    font-size: 3rem;
+  }
+
   .mobileLanguage {
     display: block;
   }

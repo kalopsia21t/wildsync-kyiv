@@ -1,6 +1,7 @@
 .about {
   width: min(100%, 900px);
-  padding: 0 2rem 4rem;
+  padding: 3rem 2rem 4rem;
+  background-color: var(--black);
   text-align: left;
 }
 
