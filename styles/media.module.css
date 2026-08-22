@@ -1,6 +1,6 @@
 .mediaContainer {
   width: 100%;
-  padding: 4rem 8rem;
+  padding: 2rem 8rem;
 }
 
 .mediaTitle {
@@ -15,8 +15,8 @@
 .mediaGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 100%;
-  gap: 1.5rem;
+  width: min(calc(100% - 6rem), 1000px);
+  gap: 1.25rem;
   margin-top: 1.5rem;
 }
 
@@ -242,5 +242,6 @@
 @media (max-width: 760px) {
   .mediaGrid {
     grid-template-columns: 1fr;
+    width: 100%;
   }
 }

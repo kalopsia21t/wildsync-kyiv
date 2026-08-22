@@ -1,11 +1,11 @@
 .eventsContainer {
   width: 100%;
-  padding: 4rem 8rem;
+  padding: 2rem 8rem;
 }
 
 .eventsHeader {
   text-align: flex-start;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   h1 {
       font-size: clamp(2rem, 5vw, 3rem);
@@ -22,11 +22,8 @@
 .event {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
-  justify-content: center;
   gap: 1.25rem;
-  align-items: start;
   width: 100%;
-  max-width: 1200px;
 }
 
 .eventCard {
