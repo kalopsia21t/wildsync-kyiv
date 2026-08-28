@@ -1,6 +1,7 @@
 .about {
   width: min(100%, 900px);
-  padding: 3rem 2rem 4rem;
+  padding: 3rem 2rem 4rem 3rem;
+  margin: 2rem 0 3rem 0;
   background-color: var(--black);
   text-align: left;
 }
@@ -27,7 +28,7 @@
 
 @media (max-width: 600px) {
   .about {
-    padding: 0 1rem 3rem;
+    padding: 2rem 1rem 3rem 1rem;
   }
 
   .about h1 {
