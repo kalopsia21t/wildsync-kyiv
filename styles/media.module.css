@@ -193,6 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: calc(100% - 8rem);
   max-width: 100%;
   max-height: 100%;
 }
@@ -200,10 +201,39 @@
 .lightboxImage {
   display: block;
   width: auto;
-  max-width: calc(100vw - 6rem);
+  max-width: 100%;
   height: auto;
   max-height: calc(100vh - 6rem);
   object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .lightbox {
+    padding: 3rem 1rem;
+  }
+
+  .lightboxImageWrap {
+    width: calc(100% - 4rem);
+  }
+
+  .lightboxImage {
+    max-width: 100%;
+    max-height: calc(100vh - 6rem);
+  }
+
+  .lightboxArrow {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .lightboxPrevious {
+    left: 0.5rem;
+  }
+
+  .lightboxNext {
+    right: 0.5rem;
+  }
 }
 
 .photoItem a {
