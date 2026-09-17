@@ -11,6 +11,16 @@ export type EventT = {
 
 export const events: EventT[] = [
   {
+    slug: "wildsync-26-09-2026-namir",
+    title: "Wildsync 26/09/2026 (Namir)",
+    img: "/posters/26_09_2026_Namir.jpg",
+    date: "26 September 2026",
+    location: "Namir",
+    lineup: "Strictly b2b Nast-X, Nikitah, Siedin",
+    posterAuthor: " Dima Phase",
+    description: "Київ. Велика Житомирська увага, Jungle! Wildsync відкриває осінній сезон черговою фірмовою вечіркою! В цей раз до лайнапу приєднається Nikitah з ексклюливним вініловим селекшном Bass музики, яка буде домінувати на відкритому танцполі, тож будьте готові відчути повільний грув та безкопромісний кач на свіжому повітрі. З боку резидентів Strictly b2b Nast-x здійснять Jungle Race по двогодинному треку різноманітного саунду, який задасть настрій і темп вечірки. Абсолютна імпровізація і стильний top notch селекшн! Непередбачуваний Dj Siedin зібрав потужний арсенал платівок, який не залишить вільного місця на танцполі, вражаючий ефект під час його сету знайомий багатьом! Вхід: 200 uah"
+  },
+  {
     slug: "wildsync-15-08-2026-namir",
     title: "Wildsync 15/08/2026 (Namir)",
     img: "/posters/15_08_2026_Namir.jpg",
