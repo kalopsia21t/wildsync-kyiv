@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 
 import "./globals.css";
 
-const siteUrl = "https://wildsync.kyiv";
+const siteUrl = "https://wildsynckyiv.com";
 
 const bodyFont = Manrope({
   variable: "--font-body",
