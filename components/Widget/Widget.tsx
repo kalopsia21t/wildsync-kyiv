@@ -1,18 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { isUpcomingEvent } from "@data/events";
+
 import styles from "@styles/events.module.css";
 
 type WidgetT = {
   title: string;
   img: string;
+  date: string;
   actionSrc?: string;
   action?: string;
 };
 
-export default function Widget({ title, img, actionSrc, action }: WidgetT) {
+export default function Widget({ title, img, date, actionSrc, action }: WidgetT) {
   const cardContent = (
-    <>
+    <div className={styles.eventCardContent}>
+      {isUpcomingEvent(date) && (
+         <span className={styles.upcomingTag}>Upcoming</span>
+      )}
       <div className={styles.eventImgContainer}>
         <Image
           className={styles.eventImg}
@@ -34,7 +40,7 @@ export default function Widget({ title, img, actionSrc, action }: WidgetT) {
           <span>{action}</span>
         </div>
       )}
-    </>
+    </div>
   );
 
   if (actionSrc) {

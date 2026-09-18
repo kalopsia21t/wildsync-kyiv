@@ -137,6 +137,24 @@
   cursor: pointer;
 }
 
+.eventCardContent {
+  position: relative;
+}
+
+.upcomingTag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 999;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: var(--purple-400);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1200px) {
   .event {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
