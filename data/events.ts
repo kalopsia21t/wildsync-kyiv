@@ -125,3 +125,7 @@ export const events: EventT[] = [
 export function getEventBySlug(slug: string) {
   return events.find((event) => event.slug === slug) || null;
 }
+
+export function isUpcomingEvent(date: string): boolean {
+  return new Date(date).getTime() >= Date.now();
+}
