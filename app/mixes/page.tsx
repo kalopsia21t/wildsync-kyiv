@@ -26,7 +26,7 @@ interface SoundCloudTrack {
 }
 
 async function getMixes(): Promise<SoundCloudTrack[]> {
-  const API_URL = "https://api-v2.soundcloud.com/users/1591940346/tracks?representation=&client_id=pKk38t8ErXEMPwcTI3sjY3kmQ3nyfbRl&limit=20&offset=0&linked_partitioning=1";
+  const API_URL = "https://api-v2.soundcloud.com/users/1591940346/tracks?representation=&client_id=Pb72ranhoyt6gw7hM7TkzUItXlMWSNSo";
 
   try {
     const res = await fetch(API_URL, {
