@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     default: "Media",
     template: "%s | Wildsync Kyiv",
   },
+  alternates: {
+      canonical: `https://wildsynckyiv.com/media`,
+  },
 }
 
 const mediaItems = await Promise.all(

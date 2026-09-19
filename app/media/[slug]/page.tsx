@@ -1,10 +1,27 @@
 import { notFound } from "next/navigation";
 import styles from "@styles/media.module.css";
 
+import type { Metadata } from "next";
+
 import { getPhotosFromFolder } from '../../actions';
 import Gallery from '@components/Gallery/Gallery';
 
 import { galleryEvents } from "@data/galleryevents";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const galleryEventTitle = galleryEvents.find((galleryEvent) => galleryEvent.slug === slug)?.title;
+  
+  return {
+    title: {
+      default: galleryEventTitle || "Media",
+      template: "%s | Wildsync Kyiv",
+    },
+    alternates: {
+      canonical: `https://wildsynckyiv.com/media/${slug}`,
+    },
+  };
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
