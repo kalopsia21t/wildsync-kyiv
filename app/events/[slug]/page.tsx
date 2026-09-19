@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       default: eventTitle || "Event",
       template: "%s | Wildsync Kyiv",
     },
+    description: "Underground Jungle, Drum & Bass, Breakbeat and Bass music event in Kyiv.",
     alternates: {
       canonical: `https://wildsynckyiv.com/events/${slug}`,
     },
