@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
+
 import styles from '@styles/media.module.css';
 import MediaWidget from '@components/Widget/MediaWidget';
 import { getPhotosFromFolder } from '../actions';
 import { galleryEvents } from '@data/galleryevents';
 import LocalizedText from '@components/Localization/LocalizedText';
+
+export const metadata: Metadata = {
+  title: {
+    default: "Media",
+    template: "%s | Wildsync Kyiv",
+  },
+}
 
 const mediaItems = await Promise.all(
   galleryEvents.map(async (event) => ({

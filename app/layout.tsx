@@ -24,7 +24,7 @@ const displayFont = Unbounded({
 });
 
 export const metadata: Metadata = {
-    title: {
+  title: {
     default: "Wildsync Kyiv — Jungle, Drum & Bass Events",
     template: "%s | Wildsync Kyiv",
   },
@@ -52,23 +52,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    locale: "uk_UA",
-    url: siteUrl,
-    siteName: "Wildsync Kyiv",
-    title: "Wildsync Kyiv — Jungle, Drum & Bass Events",
-    description:
-      "Underground Jungle, Drum & Bass, Breakbeat and Bass music events in Kyiv.",
-    images: [
-      {
-        url: "/wildsync_sticker.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Wildsync Kyiv",
-      },
-    ],
   },
   robots: {
     index: true,

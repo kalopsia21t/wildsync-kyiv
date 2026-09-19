@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
+
 import Widget from "@components/Widget";
 import styles from "@styles/events.module.css";
 import { events } from "../../data/events";
 import LocalizedText from "@components/Localization/LocalizedText";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Events",
+    template: "%s | Wildsync Kyiv",
+  },
+}
 
 export default function Events() {
   return (
