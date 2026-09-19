@@ -2,10 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import type { Metadata } from "next";
+
 import { getEventBySlug } from "@utils/getEventBySlug";
 import { events } from "@data/events";
 import styles from "@styles/events.module.css";
 import LocalizedText from "@components/Localization/LocalizedText";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const eventTitle = events.find((event) => event.slug === slug)?.title;
+  
+  return {
+    title: {
+      default: eventTitle || "Event",
+      template: "%s | Wildsync Kyiv",
+    },
+    alternates: {
+      canonical: `https://wildsynckyiv.com/events/${slug}`,
+    },
+  };
+}
 
 type Props = {
   params: Promise<{slug: string}>;
@@ -39,7 +56,7 @@ export default async function EventPage({ params }: Props) {
         <div className={styles.eventDetailContent}>
           <p className={styles.eventDetailMeta}>{event.date}</p>
           <h1>{event.title}</h1>
-          <p className={styles.eventDetailMeta}><LocalizedText translationKey="location" />: {event.location}</p>
+          <p className={styles.eventDetailMeta}><LocalizedText translationKey="location" />: <a href={event.location.link} target="_blank" rel="noopener noreferrer">{event.location.title}</a></p>
           <p className={styles.eventDetailDescription}>{event.description}</p>
           <p className={styles.eventDetailMeta}><LocalizedText translationKey="lineup" />: {event.lineup}</p>
           <p className={styles.eventDetailMeta}><LocalizedText translationKey="posterAuthor" />: {event.posterAuthor}</p>

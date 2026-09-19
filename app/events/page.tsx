@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     default: "Events",
     template: "%s | Wildsync Kyiv",
   },
+  alternates: {
+    canonical: `https://wildsynckyiv.com/events`,
+  },
 }
 
 export default function Events() {
