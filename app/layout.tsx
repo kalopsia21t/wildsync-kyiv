@@ -25,7 +25,7 @@ const displayFont = Unbounded({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wildsync Kyiv - Jungle, Drum & Bass Events",
+    default: "Wildsync Kyiv - Jungle, Drum & Bass Takeover",
     template: "%s | Wildsync Kyiv",
   },
   icons: {
@@ -49,6 +49,18 @@ export const metadata: Metadata = {
     "Underground",
     "Electronic music",
     "Nightlife",
+    "Вечірки",
+    "Драм-н-бейс",
+    "Брейкбіт",
+    "Басова музика",
+    "Київ",
+    "Україна",
+    "Нічне життя",
+    "Електронна музика",
+    "Рейв",
+    "Джангл",
+    "Андеграунд",
+    "Танцювальна музика",
   ],
   alternates: {
     canonical: "/",
