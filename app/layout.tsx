@@ -25,7 +25,7 @@ const displayFont = Unbounded({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wildsync Kyiv — Jungle, Drum & Bass Events",
+    default: "Wildsync Kyiv - Jungle, Drum & Bass Events",
     template: "%s | Wildsync Kyiv",
   },
   icons: {
