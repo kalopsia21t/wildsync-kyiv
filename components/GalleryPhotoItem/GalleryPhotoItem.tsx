@@ -1,6 +1,7 @@
 "use client";
 import { CldImage } from "next-cloudinary";
 import styles from "@styles/media.module.css";
+import { useImageLoaded } from "@hooks/useImageLoaded";
 
 
 type GalleryPhoto = {
@@ -17,8 +18,10 @@ export default function GalleryPhotoItem({
     photo: GalleryPhoto;
     onOpen: () => void;
 }) {
+  const { loaded, handleLoad } = useImageLoaded();
+
   return (
-    <div className={styles.photoItem}>
+    <div className={`${styles.photoItem} ${loaded ? "" : styles.imageSkeleton}`}>
       <button type="button" className={styles.photoButton} onClick={onOpen} aria-label="Open photo">
         <CldImage
           src={photo.publicId}
@@ -26,7 +29,8 @@ export default function GalleryPhotoItem({
           height={photo.height}
           alt="Cloudinary Asset"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw"
-          className={styles.photoImage}
+          className={`${styles.photoImage} ${loaded ? styles.loaded : ""}`}
+          onLoad={handleLoad}
         />
       </button>
     </div>

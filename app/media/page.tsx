@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import styles from '@styles/media.module.css';
 import MediaWidget from '@components/Widget/MediaWidget';
 import { getPhotosFromFolder } from '../actions';
