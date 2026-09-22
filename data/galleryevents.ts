@@ -4,7 +4,7 @@ export type GalleryEventT = {
   img: string;
   date: string;
   location: string;
-  description: string;
+  author: string;
   folderName: string;
 };
 
@@ -15,7 +15,7 @@ export const galleryEvents: GalleryEventT[] = [
     img: "/posters/04_10_2025_HVLV.jpg",
     date: "4 October 2025",
     location: "HVLV",
-    description: "Photos by r_e_a_d_e_r.",
+    author: "r_e_a_d_e_r",
     folderName: "wildsync/events/2025-10-04-wildsync/media"
   },  
   {
@@ -24,7 +24,7 @@ export const galleryEvents: GalleryEventT[] = [
     img: "/posters/10_08_2025_HVLV.jpg",
     date: "10 August 2025",
     location: "HVLV",
-    description: "Photos by Oleksandra Horokhovska.",
+    author: "Oleksandra Horokhovska",
     folderName: "wildsync/events/2025-08-10-wildsync/media"
   },
 ];

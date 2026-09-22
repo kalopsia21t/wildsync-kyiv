@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 
 import { getPhotosFromFolder } from '../../actions';
 import Gallery from '@components/Gallery/Gallery';
+import LocalizedText from '@components/Localization/LocalizedText';
 
 import { galleryEvents } from "@data/galleryevents";
 
@@ -42,7 +43,11 @@ export default async function EventPage({ params }: Props) {
   return (
     <div className={styles.mediaContainer}>
       <h1>{event.title}</h1>
-      <p>{event.description}</p>
+      <p> 
+        <LocalizedText translationKey="photosBy" /> 
+        {': '}
+        {event.author}
+      </p>
 
       <Gallery photos={photos} />
     </div>

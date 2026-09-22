@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { isUpcomingEvent } from "@data/events";
+import LocalizedText from "@components/Localization/LocalizedText";
 
+import { isUpcomingEvent } from "@data/events";
 import styles from "@styles/events.module.css";
 
 type WidgetT = {
@@ -17,7 +18,9 @@ export default function Widget({ title, img, date, actionSrc, action }: WidgetT)
   const cardContent = (
     <div className={styles.eventCardContent}>
       {isUpcomingEvent(date) && (
-         <span className={styles.upcomingTag}>Upcoming</span>
+         <span className={styles.upcomingTag}>
+           <LocalizedText translationKey={"upcoming"} />
+         </span>
       )}
       <div className={styles.eventImgContainer}>
         <Image
