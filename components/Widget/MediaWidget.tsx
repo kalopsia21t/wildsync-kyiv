@@ -11,7 +11,7 @@ import { useImageLoaded } from "@hooks/useImageLoaded";
 type WidgetT = {
   title: string;
   slug: string;
-  description: string;
+  author: string;
   photo: {
     publicId: string;
     width: number;
@@ -19,7 +19,7 @@ type WidgetT = {
   } | null;
 };
 
-export default function MediaWidget({ title, slug, description, photo }: WidgetT) {
+export default function MediaWidget({ title, slug, author, photo }: WidgetT) {
   const { loaded, handleLoad } = useImageLoaded();
 
   return (
@@ -44,7 +44,11 @@ export default function MediaWidget({ title, slug, description, photo }: WidgetT
           <LocalizedText translationKey="photoReport" />
           {`: ${title}`}
         </h2>
-        <p className={styles.photoDescription}>{description}</p>
+        <p className={styles.photoDescription}>
+          <LocalizedText translationKey="photosBy" /> 
+          {': '}
+          {author}
+        </p>
       </div>
     </Link>
   );

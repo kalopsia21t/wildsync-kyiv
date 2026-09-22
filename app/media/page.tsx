@@ -38,7 +38,7 @@ export default function Media() {
             key={event.slug}
             title={event.title}
             slug={event.slug}
-            description={event.description}
+            author={event.author}
             photo={photo}
           />
         ))}
