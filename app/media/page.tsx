@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import styles from '@styles/media.module.css';
 import MediaWidget from '@components/Widget/MediaWidget';
 import { getPhotosFromFolder } from '../actions';
@@ -39,7 +38,7 @@ export default function Media() {
             key={event.slug}
             title={event.title}
             slug={event.slug}
-            description={event.description}
+            author={event.author}
             photo={photo}
           />
         ))}

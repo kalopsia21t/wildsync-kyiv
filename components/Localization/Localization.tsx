@@ -10,8 +10,10 @@ type TranslationKey =
   | "media"
   | "mixes"
   | "about"
+  | "upcoming"
   | "aboutTitle"
   | "eventsIntro"
+  | "upcoming"
   | "mediaTitle"
   | "photoReport"
   | "mediaIntro"
@@ -24,7 +26,8 @@ type TranslationKey =
   | "lineup"
   | "openPhoto"
   | "closePhoto"
-  | "posterAuthor";
+  | "posterAuthor"
+  | "photosBy";
 
 type TranslationMap = Record<TranslationKey, string>;
 
@@ -37,6 +40,7 @@ const translations: Record<Language, TranslationMap> = {
     about: "About",
     aboutTitle: "About",
     eventsIntro: "Check out our upcoming and past events!",
+    upcoming: "Upcoming",
     mediaTitle: "Media",
     photoReport: "Photo Report",
     mediaIntro: "Check out our archive for photos!",
@@ -50,6 +54,7 @@ const translations: Record<Language, TranslationMap> = {
     openPhoto: "Open photo",
     closePhoto: "Close photo",
     posterAuthor: "Poster",
+    photosBy: "Photos by",
   },
   uk: {
     home: "Головна",
@@ -59,6 +64,7 @@ const translations: Record<Language, TranslationMap> = {
     about: "Про нас",
     aboutTitle: "Про нас",
     eventsIntro: "Перегляньте майбутні та минулі події!",
+    upcoming: "Найближчі",
     mediaTitle: "Медіа",
     photoReport: "Фото Звіт",
     mediaIntro: "Перегляньте наш фотоархів!",
@@ -72,6 +78,7 @@ const translations: Record<Language, TranslationMap> = {
     openPhoto: "Відкрити фото",
     closePhoto: "Закрити фото",
     posterAuthor: "Постер",
+    photosBy: "Автор фото",
   },
 };
 

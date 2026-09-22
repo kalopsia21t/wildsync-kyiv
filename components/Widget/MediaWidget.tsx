@@ -5,12 +5,13 @@ import { CldImage } from "next-cloudinary";
 import styles from "@styles/media.module.css";
 
 import LocalizedText from '@components/Localization/LocalizedText';
+import { useImageLoaded } from "@hooks/useImageLoaded";
 
 
 type WidgetT = {
   title: string;
   slug: string;
-  description: string;
+  author: string;
   photo: {
     publicId: string;
     width: number;
@@ -18,10 +19,12 @@ type WidgetT = {
   } | null;
 };
 
-export default function MediaWidget({ title, slug, description, photo }: WidgetT) {
+export default function MediaWidget({ title, slug, author, photo }: WidgetT) {
+  const { loaded, handleLoad } = useImageLoaded();
+
   return (
     <Link href={`/media/${slug}`} className={styles.mediaItem}>
-      <div className={styles.mediaPreview}>
+      <div className={`${styles.mediaPreview} ${loaded ? "" : styles.imageSkeleton}`}>
         {photo ? (
           <CldImage
             src={photo.publicId}
@@ -29,7 +32,8 @@ export default function MediaWidget({ title, slug, description, photo }: WidgetT
             height={photo.height}
             alt={title}
             sizes="(max-width: 768px) 100vw, 50vw"
-            className={styles.previewImage}
+            className={`${styles.previewImage} ${loaded ? styles.loaded : ""}`}
+            onLoad={handleLoad}
           />
         ) : (
           <p>No photos found.</p>
@@ -40,7 +44,11 @@ export default function MediaWidget({ title, slug, description, photo }: WidgetT
           <LocalizedText translationKey="photoReport" />
           {`: ${title}`}
         </h2>
-        <p className={styles.photoDescription}>{description}</p>
+        <p className={styles.photoDescription}>
+          <LocalizedText translationKey="photosBy" /> 
+          {': '}
+          {author}
+        </p>
       </div>
     </Link>
   );
