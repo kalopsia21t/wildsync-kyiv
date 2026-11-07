@@ -17,6 +17,19 @@ export type EventT = {
 
 export const events: EventT[] = [
   {
+    slug: "wildsync-14-11-2026-namir",
+    title: "Wildsync 14/11/2026 (Namir)",
+    img: "/posters/14_11_2026_Namir.jpg",
+    date: "14 November 2026",
+    location: {
+      title: "Namir",
+      link: "https://www.instagram.com/barna.namir",
+    },
+    lineup: "Strictly b2b Nast-X b2b Siedin, Gapon",
+    posterAuthor: " Dima Phase",
+    description: "Wildsync знов в Намірі і запрошує всіх пережити тріп у всесвіт  Jungle, Hardcore, Tekno та Drum'n'Bass на високих швидкостях! Цього разу до нас приєднається Gapon. Саме той Gapon. Буде грати Jungle. Вам не наснилось. З боку резидентів Strictly, Siedin та Nast-x з трьохгодинним tripleback турбосетом, який ви будете згадувати, як перший раз.Початок: 14 листопада о 19:00. Місце: Барна «Намір». Вхід: 300 грн",
+  },
+  {
     slug: "wildsync-26-09-2026-namir",
     title: "Wildsync 26/09/2026 (Namir)",
     img: "/posters/26_09_2026_Namir.jpg",
