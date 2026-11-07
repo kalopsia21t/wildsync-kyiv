@@ -8,6 +8,8 @@ import { getEventBySlug } from "@utils/getEventBySlug";
 import { events } from "@data/events";
 import styles from "@styles/events.module.css";
 import LocalizedText from "@components/Localization/LocalizedText";
+import EventDetails from "./eventDetails";
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -54,14 +56,7 @@ export default async function EventPage({ params }: Props) {
           />
         </div>
 
-        <div className={styles.eventDetailContent}>
-          <p className={styles.eventDetailMeta}>{event.date}</p>
-          <h1>{event.title}</h1>
-          <p className={styles.eventDetailMeta}><LocalizedText translationKey="location" />: <a href={event.location.link} target="_blank" rel="noopener noreferrer">{event.location.title}</a></p>
-          <p className={styles.eventDetailDescription}>{event.description}</p>
-          <p className={styles.eventDetailMeta}><LocalizedText translationKey="lineup" />: {event.lineup}</p>
-          <p className={styles.eventDetailMeta}><LocalizedText translationKey="posterAuthor" />: {event.posterAuthor}</p>
-        </div>
+        <EventDetails event={event} />
       </div>
     </div>
   );
